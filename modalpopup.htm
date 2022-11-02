@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Dingske</title>
+    <link rel="stylesheet" href="modalpopup.css">
+</head>
+<body>
+    <button id="modal-opener">Don't click me motherbitch!</button>
+    <div class="modal" id="modal">
+        <div class="modal-container">
+            <div class="modal-heading">
+                <div class="modal-title">Motherfucker</div>
+                <button class="close-button">&times;</button>
+            </div>
+            <div class="modal-content">
+                <p>Fuck fuck fuck</p>
+                <p>Motha motha fuck motha motha fuck fuck</p>
+                <p>Motha fuck motha fuck</p>
+                <p>Noische noische noische</p>
+                <p>1,2 1,2,3,4 noische noische noische</p>
+                <p>Smoking weed smoking wiz</p>
+                <p>Doing coke drinking beers drinking beers beers beers</p>
+                <p>Rollin' fatties smoking blunts</p>
+                <p>Who smokes the blunts?</p>
+                <p>We smoke the blunts?</p>
+            </div>
+        </div>
+        <div id="overlay">&nbsp;</div>
+
+    </div>
+    
+</body>
+<script>
+    let openButton = document.querySelector("#modal-opener");
+    let modalContainer = document.querySelector("#modal>.modal-container");
+    let modalOverlay = document.querySelector("#modal>#overlay");
+    let closeButton = document.querySelector("#modal .close-button");
+    openButton.addEventListener('click', () =>{
+        OpenModal();
+    });
+    modalOverlay.addEventListener('click', () =>{
+        CloseModal();
+    });
+    closeButton.addEventListener('click', () =>{
+        CloseModal();
+    })
+    function OpenModal() {
+        modalContainer.classList.add('active');
+        modalOverlay.classList.add('active');
+    }
+    function CloseModal(){
+        modalContainer.classList.remove('active');
+        modalOverlay.classList.remove('active');
+    }
+
+</script>
+</html>
